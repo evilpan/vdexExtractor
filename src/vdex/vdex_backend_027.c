@@ -27,9 +27,9 @@
 #include "../utils.h"
 #include "vdex_decompiler_027.h"
 
-static inline int POPCOUNT(uintptr_t x) {
-  return (sizeof(uintptr_t) == sizeof(u4)) ? __builtin_popcount(x) : __builtin_popcountll(x);
-}
+// static inline int POPCOUNT(uintptr_t x) {
+//   return (sizeof(uintptr_t) == sizeof(u4)) ? __builtin_popcount(x) : __builtin_popcountll(x);
+// }
 
 static inline u4 decodeUint32WithOverflowCheck(const u1 **in, const u1 *end) {
   CHECK_LT(*in, end);
