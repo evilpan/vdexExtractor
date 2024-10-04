@@ -23,6 +23,7 @@ DEBUG ?= false
 TARGET  = vdexExtractor
 CFLAGS  += -c -std=c11 -D_GNU_SOURCE \
            -Wall -Wextra -Werror
+CFLAGS  += -Wno-error=vla-parameter
 LDFLAGS += -lm -lz
 
 ifeq ($(DEBUG),true)
